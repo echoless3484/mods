@@ -1,0 +1,279 @@
+:root {
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #1A2034;
+}
+
+main {
+	margin-left: 5rem;
+	padding: 1rem;
+}
+
+.navbar {
+	position: fixed;
+	background-color: #1c1c1c;
+	transition: width 200ms ease;
+	z-index: 1;
+}
+
+.navbar-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav-item {
+	width: 100%
+}
+
+.nav-item:last-child {
+	margin-top: auto;
+}
+
+.nav-link {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	color: #ffffff;
+	text-decoration: none;
+	filter: grayscale(100%) opacity(0.7);
+	transition: 600ms
+}
+
+.nav-link:hover {
+	filter: grayscale(0%) opacity(1);
+	background: #363636;
+}
+
+.link-text {
+	display: none;
+}
+
+.nav-link svg {
+	min-width: 2rem;
+	margin: 0 1rem;
+}
+
+.logo {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	text-align: center;
+	background: #1c1c1c;
+	font-size: 1.5rem;
+	letter-spacing: 0.3ch;
+	width: 100%;
+}
+
+.logo svg {
+	transform: rotate(0deg);
+	transition: transform 600ms;
+	color: #ffffff;
+}
+
+.navbar:hover .logo svg {
+	transform: rotate(-180deg);
+}
+
+@media only screen and (max-width: 800px) {
+	.navbar {
+		bottom: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+	
+	.logo {
+		display: none;
+	}
+	
+	.navbar-nav {
+		flex-direction: row;
+	}
+	
+	.nav-link {
+		justify-content: center;
+	}
+	
+	main {
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.navbar {
+		top: 0;
+		width: 5rem;
+		height: 100vh;
+	}
+	
+	.navbar:hover {
+		width: 16rem;
+	}
+
+	.navbar:hover .link-text {
+		display: inline;
+		transition: opacity 600ms
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.banner {
+	position: sticky;
+	top: 0;
+	background-color: #152d58;
+	padding: 8px;
+	text-align: center;
+	color: #ffffff;
+	z-index: 0;
+}
+
+.banner button {
+	color: #ffffff;
+	padding: 0.5em 2em;
+	background-color: #152d58;
+	border: 2px solid white;
+	border-radius: 4px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.banner button:hover {
+	color: #000000;
+	background-color: #ffffff;
+	border: 2px solid white;
+	border-radius: 4px;
+}
+.banner button:active {
+	transform: translate(0em, 0.2em);
+}
+
+.format {
+	color: #ffffff; 
+	text-align: center;
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 20px;
+	background: #1A2034;
+}
+
+.format a:link {
+	color: #1155cc; 
+	background-color: transparent; 
+	text-decoration: none;
+}
+
+.format a:visited {
+	color: #1155cc; 
+	background-color: transparent; 
+	text-decoration: none;
+}
+
+.format a:hover {
+	color: #1155cc; 
+	background-color: transparent; 
+	text-decoration: underline;
+}
+
+.format a:active {
+	color: #ffffff; 
+	background-color: transparent; 
+	text-decoration: underline;
+}
+
+.format img {
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.header {
+	text-align: center;
+	color:#ffffff;
+	background-color: #152d58;
+	border-radius: 10px;
+	position: sticky;
+	top: 0px;
+	z-index: -2;
+}
+
+.header img {
+	width: 20%;
+	height: auto;
+}
+
+body::-webkit-scrollbar {
+	width: 0.45rem;
+	border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+	background: #1A2034;
+	border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #3d3d3d;
+	border-radius: 10px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+	border-radius: 10px;
+	justify-content: center;
+	justify-content: space-evenly;
+	align-items: baseline;
+}
+
+.column {
+	flex: 1;
+	max-width: 50%;
+	padding: 0 4px;
+	border-radius: 10px;
+}
+
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+	.column {
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
+
+div.imagedesc {
+	padding: 15px;
+	text-align: center;
+}
+
+hr.rounded {
+	border-top: 8px solid #484D5D;
+	border-bottom: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	border-radius: 20px;
+}
+
+.hbr li {
+	padding: 15px;
+}
